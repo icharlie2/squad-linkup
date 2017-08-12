@@ -1,0 +1,69 @@
+<!-- This is a static file -->
+<!-- served from server.js -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CJK Game</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" 
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  
+  <body>
+    <div class="container">
+      <h1 class="title">
+        Squad Linkup
+      </h1>
+      <div class="col-xs-12 col-md-10 col-md-offset-1 menu-1">
+        <div class="col-xs-8 col-xs-offset-2 play-button btn">
+          Play
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 how-to-button btn">
+          How-To
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 how-to-info">
+          This is the start of a website that will allow users to connect and explore in real-time. 
+          The lobbying system is currenty in progress. After perfecting this, we plan on implementing a 
+          text-based adventure in which players may discuss with each other and vote for different choices. 
+          Squad Linkup will constantly be improved as our coding knowledge increases, hopefully becoming a full-fledged, production-quality game in the future. 
+          For example, it is expected that MongoDB will be implemented shortly so that users may be able to continue their games after leaving the site.
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 back-button-1 back-button btn">
+          Back
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-10 col-md-offset-1 menu-2">
+        <div class="col-xs-8 col-xs-offset-2 make-room btn">
+          Make New Room
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 join-room btn">
+          Join an existing room
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 back-button-2 back-button btn">
+          Back
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-10 col-md-offset-1 menu-3">
+        <div class="col-xs-8 col-xs-offset-2 back-button-3 back-button btn">
+          Back
+        </div>
+      </div>
+    </div><!--container
+    
+    
+    <!-- Included scripts -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+    <script src="/client2.js"></script>
+    
+    </body>
+</html>
