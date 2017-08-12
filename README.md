@@ -20,3 +20,7 @@ v0.0.1
 ===========================
 New rooms are visible in the room list and are updated amongst all clients in real-time. 
 Currently, joining a room is not yet implemented - all creates rooms have a occupancy of 1 because the server considers every new room made to contain the user which created it.
+
+v0.0.2
+===========================
+Minor styling updates
