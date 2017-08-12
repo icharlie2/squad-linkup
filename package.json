@@ -1,6 +1,6 @@
 {
   "name": "squad-linkup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Designed for WebHacks2017. This website explores the usage of MongoDB, Sockets.io, Node.js and Express.js in the creation of a collaborative real-time game.",
   "main": "server.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/icharlie2/squad-linkup"
   },
   "license": "",
   "keywords": [
