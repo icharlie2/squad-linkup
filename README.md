@@ -16,12 +16,12 @@ Find out more [about Glitch](https://glitch.com/about).
 
 Patch Notes
 ===========================
-v0.0.1
+v0.0.1 August 11, 2017
 ===========================
-New rooms are visible in the room list and are updated amongst all clients in real-time. 
+New rooms are visible under "Join an existing room", although no feedback is given when "Make new room" is pressed, and are updated amongst all clients in real-time. 
 Currently, joining a room is not yet implemented - all creates rooms have a occupancy of 1 because the server considers every new room made to contain the user which created it.
 
-v0.0.2
+v0.0.2 August 11, 2017
 ===========================
 Minor styling updates
 
