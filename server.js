@@ -26,6 +26,9 @@ io.on('connection', function(socket){
   //numConnections += 1;
   //console.log('a user connected making the total: ' + numConnections);
   
+  //Modify instantly when connected
+  socket.emit("update-rooms", rooms);
+  
   //Modify rooms when a user disconnects
   //Checks if the user is already in a room and behaves accordingly
   socket.on("disconnect", function() {
@@ -36,22 +39,22 @@ io.on('connection', function(socket){
       if(rooms[socket.room].occupants == 0) {
         delete rooms[socket.room];
         if(available.length == 0) {
-          available.push(socket.room);
+          available.push(Number(socket.room));
         } else {
           for(var i = 0; i < available.length; i++) {
-            if(socket.room < available[i]) {
-              available.splice(i,0,socket.room);
+            if(Number(socket.room) < available[i]) {
+              available.splice(i,0,Number(socket.room));
               break;
             }
             else if(i == available.length-1) {
-              available.push(socket.room);
+              available.push(Number(socket.room));
             }
           }
         }
       }
+      delete socket.room;
+      io.emit("update-rooms", rooms);
     }
-    delete socket.room;
-    io.emit("update-rooms", rooms);
     //console.log('a user disconnected making the total: ' + numConnections);
   });
     
@@ -59,15 +62,15 @@ io.on('connection', function(socket){
     if(!socket.hasOwnProperty("room")){
       if(available.length == 0) {
         rooms[number] = {occupants: 1};
-        socket.room = number;
-        socket.join(number);
+        socket.room = number.toString();
+        socket.join(number.toString());
         number += 1;
         console.log("Joined room " + socket.room);
         io.emit("update-rooms", rooms);
       } else {
         rooms[available[0]] = {occupants: 1};
-        socket.room = available[0];
-        socket.join(available[0]);
+        socket.room = available[0].toString();
+        socket.join(available[0].toString());
         available = available.slice(1);
         console.log("Joined room " + socket.room);
         io.emit("update-rooms", rooms);
@@ -76,12 +79,6 @@ io.on('connection', function(socket){
   }); 
 });
 
-
-
 //Set-up the server to listen to our port: 3000
-http.listen(process.env.PORT);
+http.listen(process.env.PORT)
 console.log("Listening on port: " + process.env.PORT);
-
-/*This is for the future: 
-mongodb://bestUser:bestPassword@ds161039.mlab.com:61039/test_gamedata
-*/

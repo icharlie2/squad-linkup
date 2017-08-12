@@ -13,30 +13,17 @@ $(document).ready(()=>{
     $(".room").remove();
     
     //Generate html for all rooms
-    for(var number in Object.keys(rooms)) {
-      var roomNumber = number;
-      var occupants = rooms[number].occupants;
+    var keyArray = Object.keys(rooms);
+    for(var i in keyArray) {
+      var roomNumber = Number(keyArray[i]);
+      var occupants = rooms[keyArray[i]].occupants;
       var update = "<div class='col-xs-8 col-xs-offset-2 room" + " room-" + roomNumber;
       update += "'>Room Number: " + roomNumber + ", Occupants: " + occupants + "</div>";
       $(update).insertBefore(".back-button-3");
     }
+    //If the room-viewer is open, then make the rooms visible
+    if($(".back-button-3").css("display") == "block") {
+       $(".room").css("display", "inline-block");
+       }
   });
 });
-/*  
-
-var name = document.getElementById('name');
-var output = document.getElementById('output');
-
-//Emit events to server
-btn.addEventListener('click', function(){
-  socket.emit('clicked',{
-    uName: name.value
-  });
-});
-
-
-//Listen for events
-socket.on('respond', function(data){
-  output.innerHTML += '<p><strong>' + data.uName + '</strong> ' + 'IS HERE! </p>';
-});*/
-

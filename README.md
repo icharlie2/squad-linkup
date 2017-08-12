@@ -1,27 +1,22 @@
-Welcome to the Glitch BETA
-=========================
+Welcome to our WebHacks2017 submission,
+=====================================
+Squad Linkup!
+=======================================
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+This is the start of a website that will allow users to connect and explore in real-time. The lobbying system is currenty in progress. After perfecting this, we plan on implementing a text-based adventure in which players may discuss with each other and vote for different choices. Squad Linkup will constantly be improved as our coding knowledge increases, hopefully becoming a full-fledged, production-quality game in the future. For example, it is expected that MongoDB will be implemented shortly so that users may be able to continue their games after leaving the site.
 
-**Glitch** is the friendly commmunity where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+Click `Show` in the header to see our app live.
+
+Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
 
 Find out more [about Glitch](https://glitch.com/about).
-
-
-Your Project
-------------
-
-On the front-end,
-- edit `public/client.js`, `public/style.css` and `views/index.html`
-- drag in `assets`, like images or music, to add them to your project
-
-On the back-end,
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
-
-
-Made by [Fog Creek](https://fogcreek.com/)
 -------------------
 
 \ ゜o゜)ノ
+
+Patch Notes
+===========================
+v0.0.1
+===========================
+New rooms are visible in the room list and are updated amongst all clients in real-time. 
+Currently, joining a room is not yet implemented - all creates rooms have a occupancy of 1 because the server considers every new room made to contain the user which created it.
