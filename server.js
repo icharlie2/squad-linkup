@@ -48,6 +48,7 @@ io.on('connection', function(socket){
             }
             else if(i == available.length-1) {
               available.push(Number(socket.room));
+              break;
             }
           }
         }
@@ -68,7 +69,7 @@ io.on('connection', function(socket){
         console.log("Joined room " + socket.room);
         io.emit("update-rooms", rooms);
       } else {
-        rooms[available[0]] = {occupants: 1};
+        rooms[available[0].toString()] = {occupants: 1};
         socket.room = available[0].toString();
         socket.join(available[0].toString());
         available = available.slice(1);

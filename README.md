@@ -24,3 +24,7 @@ Currently, joining a room is not yet implemented - all creates rooms have a occu
 v0.0.2
 ===========================
 Minor styling updates
+
+v0.0.3 August 12, 2017
+==========================
+Fixed a bug where the loop for adding rooms to available array in server continued forever.
